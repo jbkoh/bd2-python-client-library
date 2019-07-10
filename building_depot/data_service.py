@@ -376,7 +376,6 @@ class DataService(BuildingDepotService):
         data = {
             'datapoints': datapoints,
         }
-        print data
         r = self.post(url, headers=self._init_headers, auth=self._auth,
                       json_data=data)
         return r.json()
