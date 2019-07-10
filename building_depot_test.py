@@ -2,10 +2,6 @@ import unittest
 from building_depot import DataService, CenterService
 
 
-api_key = 'fd7a39c3-69f1-48f3-99f1-540761a326a0'
-auth_token = '85e693ab-a6fd-4129-80bb-10f9fc519e39'
-
-
 class DataServiceTest(unittest.TestCase):
 
     def setUp(self):

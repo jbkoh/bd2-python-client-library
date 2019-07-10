@@ -52,7 +52,7 @@ class BDError(BaseException):
         self.msg = {}
         try:
             r = response.json()
-            for key, value in r.iteritems():
+            for key, value in r.items():
                 key, value = str(key), str(value)
                 self.msg[key] = value
         except ValueError:
@@ -61,7 +61,7 @@ class BDError(BaseException):
     def __str__(self):
         prt = ['status code: %d' % self.status_code]
         if type(self.msg) == dict:
-            for key, value in self.msg.iteritems():
+            for key, value in self.msg.items():
                 prt.append('%s: %s' % (key, value))
         else:
             prt.append(self.msg)
